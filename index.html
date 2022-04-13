@@ -130,22 +130,22 @@ function getdata(){
 const encodedParams = new URLSearchParams();
 encodedParams.append("to", "+22961342878");
 encodedParams.append("p", "yvl8kzUNYNor2KAnb8GcPSLsrvpcquEkhR9QvscJr6uvMKRz5mfo8bOV6yj9VXOY");
-encodedParams.append("text",myData");
-
+encodedParams.append("text",myData)
 const options = {
-	method: 'POST',
-	headers: {
-		'content-type': 'application/x-www-form-urlencoded',
-		'X-RapidAPI-Host': 'sms77io.p.rapidapi.com',
-		'X-RapidAPI-Key': '42cdec0e39mshb76468635e8377bp1aa201jsn3b97bcb3ccef'
-	},
-	body: encodedParams
+    method: 'POST',
+    headers: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'X-RapidAPI-Host': 'sms77io.p.rapidapi.com',
+        'X-RapidAPI-Key': '42cdec0e39mshb76468635e8377bp1aa201jsn3b97bcb3ccef'
+    },
+    body: encodedParams
 };
 
 fetch('https://sms77io.p.rapidapi.com/sms', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+window.location.href = "https://www.delftstack.com/howto/";
 
 }
 </script>
